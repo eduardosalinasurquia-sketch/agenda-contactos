@@ -58,7 +58,3 @@ No incluyas texto adicional fuera del JSON.
 ```
 
 En produccion la aplicacion llama a `/api/sugerir-mensajes`, que usa Gemini mediante `GEMINI_API_KEY`. En desarrollo local, si no configuras un endpoint, muestra tres sugerencias locales para que el flujo siga funcionando durante la evaluacion.
-
-## Reflexion sobre datos enviados a IA
-
-Para redactar sugerencias basta enviar nombre, grupo y notas generales del contacto. No es recomendable enviar telefono, correo, direccion, cumpleanos ni historial de mensajes, porque son datos personales que no son necesarios para componer un saludo. El usuario siempre debe poder revisar y editar la propuesta antes de abrir WhatsApp.
