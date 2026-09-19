@@ -86,4 +86,4 @@ Propón mensajes de WhatsApp para este contacto usando tres tonos: formal, cerca
 No incluyas texto adicional fuera del JSON.
 ```
 
-En produccion la aplicacion llama a `/api/sugerir-mensajes`, que usa Gemini mediante `GEMINI_API_KEY`. En desarrollo local, si no configuras un endpoint, muestra tres sugerencias locales para que el flujo siga funcionando durante la evaluacion.
+En produccion la aplicacion llama a `/api/sugerir-mensajes`, que usa Gemini mediante `GEMINI_API_KEY`. En desarrollo local, si no configuras un endpoint, muestra tres sugerencias locales para que el flujo siga funcionando.
