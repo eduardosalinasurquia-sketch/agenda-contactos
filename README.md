@@ -1,6 +1,6 @@
 # Agenda de Contactos - React + Tailwind CSS + SQLite
 
-Aplicacion web offline-first desarrollada para el laboratorio SENATI. Usa React con Vite, Tailwind CSS y SQLite en el navegador mediante `sql.js`.
+Aplicacion web de contactos desarrollado con fines educativos para practica durante entorno de evaluaciones de SENATI. Usa React con Vite, Tailwind CSS y SQLite en el navegador mediante `sql.js`.
 
 ## Instalacion
 
