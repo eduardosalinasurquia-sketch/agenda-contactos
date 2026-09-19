@@ -17,6 +17,29 @@ npm run test
 npm run build
 ```
 
+## Capturas para la entrega
+
+Agrega al README o al repositorio capturas de:
+
+- Agenda con al menos diez contactos.
+- Formulario de creacion y edicion.
+- Busqueda sin resultados.
+- Dialogo de confirmacion antes de eliminar.
+- Panel de estadisticas.
+- Exportacion del archivo `agenda.db`.
+- Boton "Sugerir mensaje" usando Gemini.
+
+## Decisiones de diseno
+
+- Se uso SQLite en el navegador con `sql.js` para cumplir el enfoque offline-first del manual.
+- La interfaz no ejecuta SQL directamente: las consultas viven en `src/db/contactosRepo.js`.
+- El estado de React se concentra en `src/hooks/useContactos.js` para separar UI y datos.
+- La API key de Gemini no se expone en el navegador; se usa una funcion serverless de Vercel en `api/sugerir-mensajes.js`.
+- Los filtros, ordenamientos y estadisticas se resuelven con SQL para evitar recorrer arreglos en la UI.
+- La importacion de `agenda.db` exige confirmacion porque reemplaza la base local.
+- Los mensajes de WhatsApp se codifican con `encodeURIComponent` y el telefono se normaliza con prefijo de Peru.
+- La deteccion de duplicados normaliza tildes y prefijos telefonicos antes de calcular Levenshtein.
+
 ## Despliegue en Vercel con Gemini
 
 1. Importa este repositorio desde Vercel.
