@@ -17,17 +17,23 @@ npm run test
 npm run build
 ```
 
-## Capturas para la entrega
+## Capturas
 
-Agrega al README o al repositorio capturas de:
+### Agenda con contactos
 
-- Agenda con al menos diez contactos.
-- Formulario de creacion y edicion.
-- Busqueda sin resultados.
-- Dialogo de confirmacion antes de eliminar.
-- Panel de estadisticas.
-- Exportacion del archivo `agenda.db`.
-- Boton "Sugerir mensaje" usando Gemini.
+![Agenda con contactos](docs/capturas/agenda-contactos.png)
+
+### Formulario de contacto descargado en vcf
+
+![Formulario de contacto](docs/capturas/descarga-vcf.png)
+
+### Sugerir mensaje con Gemini
+
+![Sugerir mensaje con Gemini](docs/capturas/formulario-contacto.png)
+
+### Agenda contactos en Android
+
+![Exportar agenda.db](docs/capturas/formulario-android.jpeg)
 
 ## Decisiones de diseno
 
