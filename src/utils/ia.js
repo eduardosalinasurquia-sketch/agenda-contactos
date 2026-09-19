@@ -5,9 +5,9 @@ No incluyas texto adicional fuera del JSON.
 `
 
 export async function sugerirMensajes(contacto) {
-  const endpoint = import.meta.env.VITE_AI_ENDPOINT
+  const endpoint = import.meta.env.VITE_AI_ENDPOINT || '/api/sugerir-mensajes'
 
-  if (!endpoint) {
+  if (import.meta.env.DEV && !import.meta.env.VITE_AI_ENDPOINT) {
     return [
       { tono: 'formal', mensaje: `Hola ${contacto.nombre}, le escribo para coordinar un tema pendiente.` },
       { tono: 'cercano', mensaje: `Hola ${contacto.nombre}, como estas? Te escribo para saludarte.` },
@@ -30,9 +30,9 @@ export async function sugerirMensajes(contacto) {
 
   if (!respuesta.ok) throw new Error('El modelo no respondio correctamente.')
 
-  const texto = await respuesta.text()
-  const data = JSON.parse(texto)
+  const data = await respuesta.json()
+  const mensajes = data.mensajes ?? data
 
-  if (!Array.isArray(data)) throw new Error('El modelo no devolvio un arreglo JSON.')
-  return data
+  if (!Array.isArray(mensajes)) throw new Error('El modelo no devolvio un arreglo JSON.')
+  return mensajes
 }
